@@ -72,12 +72,10 @@ export default function Page() {
       </div>
 
       {/* Sidebar */}
-      {menuOpen && (
-        <Sidebar
-          open={true}
-          onClose={() => setMenuOpen(false)}
-        />
-      )}
+      <Sidebar
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+      />
 
       {/* Animations & helpers */}
       <style jsx global>{`

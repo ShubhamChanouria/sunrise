@@ -23,7 +23,7 @@ export default function Sidebar({ open, onClose }) {
     >
       {/* Backdrop */}
       <div
-        className={`absolute inset-0 bg-black/50 transition-opacity duration-300 cursor-pointer ${
+        className={`absolute inset-0 bg-black/50 transition-all duration-500 ease-in-out cursor-pointer ${
           open ? "opacity-100" : "opacity-0"
         }`}
         onClick={onClose}
@@ -31,8 +31,8 @@ export default function Sidebar({ open, onClose }) {
 
       {/* Panel (right) */}
       <aside
-        className={`fixed top-0 right-0 h-full w-[70vw] max-w-[320px] bg-white text-black shadow-2xl transition-transform duration-300 ease-out will-change-transform overflow-hidden ${
-          open ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full w-[70vw] max-w-[320px] bg-white text-black shadow-2xl transition-all duration-500 ease-in-out will-change-transform overflow-hidden ${
+          open ? "translate-x-0 scale-100" : "translate-x-full scale-95"
         }`}
         role="dialog"
         aria-label="Main menu"
